@@ -64,6 +64,8 @@ reg = re.compile("\d")
 match = re.findall(reg, text)
 print(match)
 # \d matches ein digit
-
-reg=re.compile("\$\d\.\d\d")
+text = "This book on tennis cost $893.99 at Walmart."
+reg=re.compile("\$\d+\.\d{2}")
+match=re.search(reg,text)
+print(match)
 #$ must be escaped since $ a command for python ist.

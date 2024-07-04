@@ -1,6 +1,6 @@
 import re
 
-reg = re.compile("www.google.(de|com)")
+reg = re.compile("(https?://)*www\.[a-zA-Z0-9\.\-]+\.(de|com)[a-zA-Z0-9\.\-/]*") #Punkt innerhalb von Exkigen Klammern ist ein echter .
 
 m = reg.match("www.google.com")
 print(m)
